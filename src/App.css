@@ -8,8 +8,8 @@
 /* Global font and background */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #121212; /* Dark background for dark theme */
+  color: #e0e0e0; /* Light text for contrast */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,61 +20,84 @@ body {
 
 /* Main container */
 .app-container {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #1e1e1e; /* Darker card background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Subtle shadow for floating effect */
   padding: 40px;
   width: 100%;
   max-width: 600px;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 /* Header styles */
 h2 {
   font-size: 1.8em;
   font-weight: 600;
-  color: #202124;
+  color: #ffffff; /* Light text for headings */
   margin-bottom: 20px;
 }
 
 /* Textarea input for text */
 textarea {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   font-size: 1em;
   border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  background-color: #fafafa;
+  border: 1px solid #444; /* Dark border for inputs */
+  background-color: #333; /* Dark background for text areas */
+  color: #e0e0e0; /* Light text for input */
   resize: none;
   outline: none;
   margin-bottom: 20px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 /* Textarea focus effect */
 textarea:focus {
-  border-color: #4285f4;
-  background-color: #ffffff;
+  border-color: #4285f4; /* Focus border color (Google Blue) */
+  background-color: #222; /* Slightly lighter background on focus */
 }
 
 /* Dropdown menu for voices */
 select {
-  padding: 8px;
+  padding: 10px;
   font-size: 1em;
   border-radius: 8px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #444; /* Dark border for dropdown */
   margin-bottom: 20px;
-  background-color: #fafafa;
+  background-color: #333; /* Dark background for select */
+  color: #e0e0e0; /* Light text */
   cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 select:focus {
-  border-color: #4285f4;
-  outline: none;
+  border-color: #4285f4; /* Focus border color */
+  background-color: #222; /* Lighter background on focus */
 }
 
 /* Range input for speech rate */
 input[type="range"] {
   width: 100%;
   margin-bottom: 20px;
+  background-color: #444; /* Darker background for the range */
+  border-radius: 8px;
+  appearance: none;
+  height: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #4285f4; /* Track color */
+  border-radius: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #ffffff; /* Thumb color */
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
 }
 
@@ -82,25 +105,31 @@ input[type="range"] {
 h3 {
   font-size: 1.2em;
   font-weight: 500;
-  color: #555;
+  color: #e0e0e0; /* Light color for rate text */
 }
 
 /* Speak button styles */
 button {
   padding: 12px 30px;
-  background-color: #4285f4;
+  background-color: #4285f4; /* Google Blue for button */
   border: none;
   color: white;
   font-size: 1em;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
   margin-top: 20px;
 }
 
-/* Button hover effect */
 button:hover {
-  background-color: #3367d6;
+  background-color: #3367d6; /* Darker blue on hover */
+  transform: scale(1.05); /* Subtle scaling effect on hover */
+}
+
+/* Button focus effect */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4285f4;
 }
 
 /* Responsive design for small screens */
