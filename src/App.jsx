@@ -16,7 +16,7 @@ function App() {
   }
   return (
     <>
-      <h2>React Text to Speech App</h2>
+      <h2>Text to Speech App</h2>
       <textarea
         rows="5"
         cols="58"
@@ -46,8 +46,8 @@ function App() {
           onChange={(e) => setRate(e.target.value)}
         />
       </div>
-      <h3>Current Speech rate is {rate}</h3>
-      <button onClick={() => handleSpeak()}>Speak</button>
+      <h3>Speed: {rate}</h3>
+      <button onClick={() => handleSpeak()}>Play</button>
     </>
   );
 }
