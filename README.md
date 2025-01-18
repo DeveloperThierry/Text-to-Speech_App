@@ -36,3 +36,6 @@ We welcome contributions! If you'd like to improve the project, feel free to:
 
 Enjoy exploring the **Text to Speech App**, and make the most of its features to enhance your productivity and accessibility! 🌍💬
 
+![Preview Image](preview.png)
+
+
